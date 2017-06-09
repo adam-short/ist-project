@@ -1,0 +1,60 @@
+<html>
+<head>
+  <title> The Space Revolution </title>
+  <link href="css/tachyons.min.css" rel="stylesheet">
+  <link href="css/styling.css" rel="stylesheet">
+</head>
+<body class="white cover bg-mars">
+  <nav class="avenir mt4 flex justify-center">
+    <a class="pa3 mh3 no-underline white fw6 tracked" id="home-button" href="index.html"> HOME </a>
+    <span class="w4"></span>
+    <a class="pa3 mh3 no-underline white fw6 tracked" href="the-man.html"> THE MAN </a>
+    <a class="pa3 mh3 no-underline white fw6 tracked" href="the-rocket.html"> THE ROCKET </a>
+    <a class="pa3 mh3 no-underline white fw6 tracked" href="the-reason.html"> THE REASON </a>
+    <a class="pa3 mh3 no-underline white fw6 tracked" href="the-countdown.html"> THE COUNTDOWN </a>
+  </nav>
+
+  <h1 class="avenir f-headline fw1 tc mt7 tracked-mega"> THE SPACE REVOLUTION </h1>
+  <h4 class="avenir tc fw6 tracked-mega mb7"> THE WHO, WHAT AND WHY OF HUMANITIES RISE TO A SPACE FARING NATION </h4>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+  <script src="js/velocity.js"> </script>
+  <script>
+  var $home = $("#home-button");
+  var $links = $("nav a");
+
+  function onHover() {
+    $home.velocity({
+      width: 80,
+      height: 45,
+      fontSize: 15,
+      color: "#ffffff",
+      borderRadius: 5
+
+    }, [ 100, 15 ]);
+  }
+
+  function onExitHover() {
+    $home.velocity({fontSize: 0}, {duration: 0});
+    $home.velocity({
+      background: "20528D",
+      color: "20528D",
+      width: 10,
+      height: 10,
+      borderRadius: 20
+    }, [ 100, 15 ])
+  }
+
+  function addBorderRadius() {
+
+  }
+
+  $home.hover(onHover, onExitHover)
+  $links.hover(function() {
+    $(this).toggleClass("no-underline");
+  });
+  </script>
+</body>
+</html>

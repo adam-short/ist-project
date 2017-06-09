@@ -1,0 +1,105 @@
+<html>
+<head>
+  <title> The Space Revolution </title>
+  <link href="css/tachyons.min.css" rel="stylesheet">
+  <link href="css/styling.css" rel="stylesheet">
+</head>
+<body class="avenir cover">
+  <nav class="avenir mt4 flex justify-center">
+    <a class="pa3 mh3 no-underline black fw6 tracked" id="home-button" href="index.html"> HOME </a>
+    <span class="w4"></span>
+    <a class="pa3 mh3 no-underline black fw6 tracked" href="the-man.html"> THE MAN </a>
+    <a class="pa3 mh3 no-underline black fw6 tracked" href="the-rocket.html"> THE ROCKET </a>
+    <a class="pa3 mh3 no-underline black fw6 tracked" href="the-reason.html"> THE REASON </a>
+    <a class="pa3 mh3 no-underline black fw6 tracked" href="the-countdown.html"> THE COUNTDOWN </a>
+  </nav>
+
+  <img class="fl fixed bottom-0" src="img/elon-musk.png">
+  <div class="fr w-50 pa6">
+    <h3 class="f2"> How To Change The World. </h3>
+    <ol class="lh-copy f4 mb5">
+      <li class="ph2"> Consider the 'impossible' a minor set back. </li>
+      <li class="ph2"> Work twenty six hours a day. </li>
+      <li class="ph2"> Have a brain that makes a computer look slow. </li>
+      <li class="ph2 b"> Be Elon. </li>
+    </ol>
+
+    <p class="lh-copy">
+      Elon Musk gives dedication its meaning; a visionary who lives in the future
+      and gives every waking moment he has to bringing it to fruition. Born on
+      June 28th, 1971 in Pretoria, Transvaal, South Africa, Elon has a younger
+      brother and sister. At the age of 17 Elon was accepted into Queen's University
+      in Kingston for undergraduate study. In 1992, after spending several years
+      at Queen's he transferred to Pennsylvania; he got a degree in physics and
+      economics.
+    </p>
+
+    <p class="lh-copy">
+      In 1995 Musk and his brother Kimbal started Zip2 - an internet based 'city
+      guide' for the newspaper publishing industry. Compaq acquired Zip2 for
+      US$307 million in cash and US$34 million in stock during February 1999.
+      Elon Musk walked away with $22 million for his 7% share.
+    </p>
+    <p class="lh-copy">
+      A month later, Musk co-founded X.com, an online financial services and e-mail payment company
+      with US$10 million from the sale of Zip2. One year later, the company merged with
+      PayPal. Musk was ousted in October 2000 from his role as CEO due to a disagreement
+      with other company leaders. In October 2002 Paypal was acquired by eBay for
+      US$1.5 billion in stock. <b class="fw6"> Elon Musk made US$165 million. </b>
+    </p>
+
+    <p class="lh-copy mb5">
+       After a series of explorations around a mission to mars, Elon Musk founded SpaceX.
+       <br>
+       And then Tesla.
+       <br>
+       And then SolarCity.
+       <br>
+       Elon Musk is a genius serial entrepreneur worth US$17 billion. He wants to
+       make Human's a multi-planetary species before his death; and his plan to do it
+       is incredible.
+    </p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bF1uoeCDwKs" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+  <script src="js/velocity.js"> </script>
+  <script>
+  var $home = $("#home-button");
+  var $links = $("nav a");
+
+  function onHover() {
+    $home.velocity({
+      width: 80,
+      height: 45,
+      fontSize: 15,
+      color: "#ffffff",
+      borderRadius: 5
+
+    }, [ 100, 15 ]);
+  }
+
+  function onExitHover() {
+    $home.velocity({fontSize: 0}, {duration: 0});
+    $home.velocity({
+      background: "20528D",
+      color: "20528D",
+      width: 10,
+      height: 10,
+      borderRadius: 20
+    }, [ 100, 15 ])
+  }
+
+  function addBorderRadius() {
+
+  }
+
+  $home.hover(onHover, onExitHover)
+  $links.hover(function() {
+    $(this).toggleClass("no-underline");
+  });
+  </script>
+</body>
+</html>

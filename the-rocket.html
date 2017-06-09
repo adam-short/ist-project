@@ -1,0 +1,90 @@
+<html>
+<head>
+  <title> The Space Revolution </title>
+  <link href="css/tachyons.min.css" rel="stylesheet">
+  <link href="css/styling.css" rel="stylesheet">
+</head>
+<body class="avenir cover">
+  <nav class="avenir mt4 flex justify-center mb6">
+    <a class="pa3 mh3 no-underline black fw6 tracked" id="home-button" href="index.html"> HOME </a>
+    <span class="w4"></span>
+    <a class="pa3 mh3 no-underline black fw6 tracked" href="the-man.html"> THE MAN </a>
+    <a class="pa3 mh3 no-underline black fw6 tracked" href="the-rocket.html"> THE ROCKET </a>
+    <a class="pa3 mh3 no-underline black fw6 tracked" href="the-reason.html"> THE REASON </a>
+    <a class="pa3 mh3 no-underline black fw6 tracked" href="the-countdown.html"> THE COUNTDOWN </a>
+  </nav>
+
+  <h3 class="f2 tc mb6"> THE LARGEST MOVING STRUCTURE.<br>EVER.</h3>
+  <img class="" src="http://img.clubic.com/08559914-photo-spacex-interplanetary-transport-system.jpg">
+
+  <h3 class="f2 tc pa5"> SPACEX'S INTERPLANETARY TRANSPORTER </h3>
+  <div class="flex justify-center">
+    <div class="">
+      <img class="pr7" src="img/its.png">
+    </div>
+    <div class="flex flex-column justify-center">
+      <div class="">
+        <h2 class="f1 fw1 tc"> 550 </h2>
+        <h4 class="fw5 tc"> tonnes to orbit </h4>
+      </div>
+      <div>
+        <h2 class="f1 fw1 tc"> 122 </h2>
+        <h4 class="fw5 tc"> meters tall </h4>
+      </div>
+      <div>
+        <h2 class="f1 fw1 tc"> 10,500 </h2>
+        <h4 class="fw5 tc"> lift off mass (t) </h2>
+      </div>
+      <div>
+        <h2 class="f1 fw1 tc"> 13,033 </h2>
+        <h4 class="fw5 tc"> lift off thrust (t) </h2>
+      </div>
+      <div>
+        <h2 class="f1 fw1 tc"> 42 </h2>
+        <h4 class="fw5 tc"> bottom stage engines </h2>
+      </div>
+    </div>
+  </div>
+  <iframe class="db center pa5" width="1080" height="800" src="https://www.youtube.com/embed/0qo78R_yYFA" frameborder="0" allowfullscreen></iframe>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+  <script src="js/velocity.js"> </script>
+  <script>
+  var $home = $("#home-button");
+  var $links = $("nav a");
+
+  function onHover() {
+    $home.velocity({
+      width: 80,
+      height: 45,
+      fontSize: 15,
+      color: "#ffffff",
+      borderRadius: 5
+
+    }, [ 100, 15 ]);
+  }
+
+  function onExitHover() {
+    $home.velocity({fontSize: 0}, {duration: 0});
+    $home.velocity({
+      background: "20528D",
+      color: "20528D",
+      width: 10,
+      height: 10,
+      borderRadius: 20
+    }, [ 100, 15 ])
+  }
+
+  function addBorderRadius() {
+
+  }
+
+  $home.hover(onHover, onExitHover)
+  $links.hover(function() {
+    $(this).toggleClass("no-underline");
+  });
+  </script>
+</body>
+</html>

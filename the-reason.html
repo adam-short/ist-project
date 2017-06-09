@@ -1,0 +1,87 @@
+<html>
+<head>
+  <title> The Space Revolution </title>
+  <link href="css/tachyons.min.css" rel="stylesheet">
+  <link href="css/styling.css" rel="stylesheet">
+</head>
+<body class="avenir cover">
+  <nav class="avenir mt4 flex justify-center">
+    <a class="pa3 mh3 no-underline black fw6 tracked" id="home-button" href="index.html"> HOME </a>
+    <span class="w4"></span>
+    <a class="pa3 mh3 no-underline black fw6 tracked" href="the-man.html"> THE MAN </a>
+    <a class="pa3 mh3 no-underline black fw6 tracked" href="the-rocket.html"> THE ROCKET </a>
+    <a class="pa3 mh3 no-underline black fw6 tracked" href="the-reason.html"> THE REASON </a>
+    <a class="pa3 mh3 no-underline black fw6 tracked" href="the-countdown.html"> THE COUNTDOWN </a>
+  </nav>
+
+  <h1 class="f2 tc pt6"> WHY GO? </h1>
+  <p class="lh-copy w-50 center pa5">
+    Mars is the logical next step in human space exploration. Just as the Moon
+    was a giant step for humankind in the 1960s and provided generations with
+    inspiration to dream big and do great things, human Mars exploration will do
+    that during my lifetime. We have the capability to send humans to Mars, and
+    even more importantly, we have the obligation to do so. It is our duty to
+    take on this challenge whole-heartedly, to inspire a new generation of kids
+    to stay curious, and in doing so, to create a better future. We are the Mars
+    generation, and this is our future.
+  </p>
+
+  <img class="pb6" src="http://static6.businessinsider.com/image/57eabc99b0ef9764008b87ec-2400/spacex-mars-rocket-interplanetary-transport-system-youtube20.png">
+
+  <p class="lh-copy w-50 center pa5">
+    After the Earth, Mars is the most habitable planet in our solar system due to
+    several reasons: - Its soil contains water to extract - It isn’t too cold or
+    too hot - There is enough sunlight to use solar panels - Gravity on Mars is
+    38% that of our Earth's, which is believed by many to be sufficient for the
+    human body to adapt to - It has an atmosphere (albeit a thin one) that offers
+    protection from cosmic and the Sun's radiation - The day/night rhythm is very
+    similar to ours here on Earth: a Mars day is 24 hours, 39 minutes and 35 seconds
+    <br>
+    The only other two celestial bodies in orbits near the Earth are our Moon and
+    Venus. There are far fewer vital resources on the Moon, and a Moon day takes
+    a month. It also does not have an atmosphere to form a barrier against radiation.
+  </p>
+
+  <img class="w-100 pt6" src="img/landed-on-mars.png">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+  <script src="js/velocity.js"> </script>
+  <script>
+  var $home = $("#home-button");
+  var $links = $("nav a");
+
+  function onHover() {
+    $home.velocity({
+      width: 80,
+      height: 45,
+      fontSize: 15,
+      color: "#ffffff",
+      borderRadius: 5
+
+    }, [ 100, 15 ]);
+  }
+
+  function onExitHover() {
+    $home.velocity({fontSize: 0}, {duration: 0});
+    $home.velocity({
+      background: "20528D",
+      color: "20528D",
+      width: 10,
+      height: 10,
+      borderRadius: 20
+    }, [ 100, 15 ])
+  }
+
+  function addBorderRadius() {
+
+  }
+
+  $home.hover(onHover, onExitHover)
+  $links.hover(function() {
+    $(this).toggleClass("no-underline");
+  });
+  </script>
+</body>
+</html>
